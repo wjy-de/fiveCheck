@@ -15,6 +15,7 @@ $(function(){
 	var undo=$(".undo");  //悔棋
 	var last =[]; //最后一枚棋子
 	var qipan=$(".box1");  //棋盘
+	var audioBg=$("#audioBg").get(0);//背景音乐
 	
 	/*对战模式变量*/
 	var flag=1;  //1:人人对战  2：人机对战 
@@ -254,7 +255,6 @@ $(function(){
 		for(var i=0;i<15;i++){
 			ctx.moveTo(hy(i),hy(0));
 			ctx.lineTo(hy(i),hy(14));
-			
 			ctx.moveTo(hy(0),hy(i));
 			ctx.lineTo(hy(14),hy(i));
 		}
@@ -405,6 +405,7 @@ $(function(){
 		$(canvas).on('click',play);
 		return false;
 	}
+	
 	/*再来一局*/	
 	
 	/*悔棋*/
@@ -428,4 +429,25 @@ $(function(){
 	undo.on('click',Undo);
 	/*悔棋*/
 	
+	//背景音乐
+	var flagBg = true;
+	function playBg(){
+		if(flagBg){
+			audioBg.play();
+			$('.btnBg').html("&#xe658;");
+		}else{
+			audioBg.pause();
+			$('.btnBg').html("&#xe6bc;");
+		}
+	}
+	playBg();
+	
+	audioBg.oncanplay = function () {
+		flagBg = true;
+	}
+	$('.btnBg').on('click',function(){
+		flagBg = !flagBg;
+		playBg();
+		return false;
+	})
 })

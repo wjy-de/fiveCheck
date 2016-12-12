@@ -4,6 +4,16 @@
 body{
 	
 }
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('iconfont.eot');
+  src: url('iconfont.eot?#iefix') format('embedded-opentype'),
+  url('iconfont.woff') format('woff'),
+  url('iconfont.ttf') format('truetype'),
+  url('iconfont.svg#iconfont') format('svg');
+}
+
 /*游戏界面*/
 @keyframes show1{
 	0%{
@@ -33,8 +43,7 @@ body{
 	bottom:0;
 	margin:auto;
 	width:100%;
-	background-color: #eedc9e;
-	background-image: url(../img/t0117320a2d86257ec4.jpg);
+	background-image: url(../img/bg5.jpg);
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -102,7 +111,7 @@ div.qipanNo{
 #canvas1,#canvas2{
 	display: block;
 	background-color: #fff;
-	border: 10px solid #A27345;
+	border: 10px solid #A8D66E;
 	border-radius: 50%;
 	box-sizing: border-box;
 	position: absolute;
@@ -128,13 +137,11 @@ div.qipanNo{
 	margin-top: 25px;
 }
 .black{
-	background-color: #000000;
-	/*top: 260px;*/
 	color: #fff;
-	background-image: url(../img/images/black.png);
+	background-image: url(../img//w.png);
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-size: 31.8px 23.8px;
+	background-size: cover;
 }
 .white{
 	/*top: 540px;*/
@@ -199,7 +206,6 @@ div.show2{
 .btn{
 	width: 152px;
 	height: 40px;
-	background: #867436;
 	margin-left: -200px;
 	margin-top: 20px;
 	border-radius: 30px;
@@ -209,12 +215,14 @@ div.show2{
 	font-size: 28px;
 	line-height: 40px;
 	text-align: center;	
-	border: 2px solid #49495B;
+	background-image: url(../img/btn1_06.png);
+	background-repeat: no-repeat;
+	background-position: center center;
 	opacity: 0;
 	cursor: pointer;
 }
 .way1{
-	margin-top: 100px;
+	margin-top: 150px;
 }
 .way1{
 	animation: btnD 0.8s ease-in-out 3s 1 forwards;
@@ -270,8 +278,7 @@ div.show2{
 	right:0;
 	bottom:0;
 	margin:auto;
-	background-color: #eedc9e;
-	background-image: url(../img/t0117320a2d86257ec4.jpg);
+	background-image: url(../img/bg5.jpg);
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -284,45 +291,44 @@ div.active1No{
 	animation: hideTNo 0.9s ease-in 0.9s 1 forwards;
 }
 .title{
-	width: 374px;
-	height: 146px;
+	width: 220px;
+	height: 220px;
 	position: absolute;
-	left: 0;
-	right: 0;
-	margin-left: auto;
-	margin-right: auto;
-	top: 50px;
-	background-image: url(../img/title1.png);
+	right: 300px;
+	top: 0;
+	bottom: 0;
+	margin-bottom: auto;
+	margin-top: auto;
+	background-image: url(../img/icon2.png);
 	background-repeat: no-repeat;
-	background-size: 399px 600px;
-	background-position: -10px -105px;
+	background-size: 220px 220px;
+	background-position: center center;
 }
 .sBtn,.guanyu,.tuichu{
 	width: 150px;
 	height: 41px;
 	position: absolute;
-	left: 0;
-	right: 0;
-	margin-left: auto;
-	margin-right: auto;
-	opacity: 0.5;
 	border-radius: 30px;
 	cursor: pointer;
-	background-image: url(../img/t01e1f56ba1b9a09908.png);
+	background-image: url(../img/btn1_06.png);
 	background-repeat: no-repeat;
-	background-size: 399px 600px;
+	background-position: center center;
+	line-height: 41px;
+	text-align: center;
+	color: #fff;
+	font-weight: 600;
 }
 .sBtn{
-	top: 300px;	
-	background-position: -125px -372px;
+	top: 300px;	;
+	left: 220px
 }
 .guanyu{
 	top: 360px;	
-	background-position: -125px -413px;
+	left: 320px
 }
 .tuichu{
 	top: 420px;	
-	background-position: -125px -453px;
+	left: 420px
 }
 .about{
 	width: 300px;
@@ -392,10 +398,8 @@ div.aboutHide{
 	height: 0;
 	z-index: 0;
 	display: none;
-	background-color:#EDDB9D;
 	box-shadow: 0 0 0 1000px rgba(0,0,0,0.5);
 	opacity: 0.5;
-	background-color: rgba(101,87,40,1);
 }
 .del{
 	position: absolute;
@@ -431,7 +435,7 @@ a.load{
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
-	background-color: rgba(101,87,40,0.9);
+	/*background-color: rgba(101,87,40,0.9);*/
 	color: #fff;
 	font-family: "微软雅黑";
 	font-size: 18px;
@@ -439,3 +443,19 @@ a.load{
 	text-align: center;
 	line-height: 40px;
 }
+
+.btnBg{
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-family: 'iconfont';
+	font-size: 36px;
+	position: absolute;
+	bottom:50px;
+	right: 50px;
+	z-index:100;
+	color: #70A81F;
+	font-weight: 600;
+}
+
